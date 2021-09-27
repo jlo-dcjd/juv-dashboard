@@ -10,7 +10,7 @@ def app():
     refs_2016 = pd.read_csv('https://raw.githubusercontent.com/jlo-dcjd/juv-dashboard/main/apps/data/Referrals_2016_2021.csv',
      index_col='Referral_Date')
 
-    col_names = ['Pid', 'BirthDate', 'Sex', 'Race', 'Ref_Date', 'Paper_Date', 'Referral_Date', 'Stat', 'Category', 'Offense',
+    col_names = ['Pid', 'Sex', 'Race', 'Ref_Date', 'Paper_Date', 'Referral_Date', 'Stat', 'Category', 'Offense',
             'General_Category', 'OffenseDescription', 'Referral_Type']
 
     refs = pd.read_csv('https://raw.githubusercontent.com/jlo-dcjd/juv-dashboard/main/apps/data/Referrals%202010-2021.csv', names=col_names, skiprows=1)

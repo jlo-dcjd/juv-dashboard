@@ -10,7 +10,7 @@ months = ['Jan.', 'Feb.', 'Mar.', 'Apr.',
                'May', 'Jun.', 'Jul.', 'Aug.',
                'Sep.', 'Oct.', 'Nov.', 'Dec.']
 
-detentions = pd.read_csv('/data/detentions_2016_2021.csv', index_col='Date')
+detentions = pd.read_csv('https://raw.githubusercontent.com/jlo-dcjd/juv-dashboard/main/apps/data/detentions_2016_2021.csv', index_col='Date')
 detentions = detentions.round(2)
 
 def percentage_change(col1,col2):

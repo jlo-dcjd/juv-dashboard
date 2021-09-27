@@ -7,7 +7,7 @@ import datetime
 
 
 def app():
-    refs_2016 = pd.read_csv('/data/Referrals_2016_2021.csv',
+    refs_2016 = pd.read_csv('https://raw.githubusercontent.com/jlo-dcjd/juv-dashboard/main/apps/data/Referrals_2016_2021.csv',
      index_col='Referral_Date')
 
     col_names = ['Pid', 'BirthDate', 'Sex', 'Race', 'Ref_Date', 'Paper_Date', 'Referral_Date', 'Stat', 'Category', 'Offense',

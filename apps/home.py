@@ -13,7 +13,7 @@ def app():
     col_names = ['Pid', 'Sex', 'Race', 'Ref_Date', 'Paper_Date', 'Referral_Date', 'Stat', 'Category', 'Offense',
             'General_Category', 'OffenseDescription', 'Referral_Type']
 
-    refs = pd.read_csv('https://raw.githubusercontent.com/jlo-dcjd/juv-dashboard/main/apps/data/Referrals%202010-2021.csv', names=col_names, skiprows=1)
+    refs = pd.read_csv('https://raw.githubusercontent.com/jlo-dcjd/juv-dashboard/main/apps/data/Referrals%202010-2021.csv', dtype='unicode', names=col_names, skiprows=1)
     refs['Referral_Date'] = pd.to_datetime(refs['Referral_Date'])
 
 

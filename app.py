@@ -17,7 +17,7 @@ app.add_app("Referral Offense Correlation", roc.app)
 app.add_app("Referral Offense % Change", ref_perc.app)
 app.add_app("Detention % Change", det_perc.app)
 app.add_app("Detention Boxplot per Year", det_boxplot.app)
-app.add_app("Formal & Paper Formalized Referrals", form-ref-paper-ref.app)
+app.add_app("Formal & Paper Formalized Referrals", form_ref_paper_ref.app)
 
 
 # The main app

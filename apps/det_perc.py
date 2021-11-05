@@ -6,11 +6,14 @@ from plotly.subplots import make_subplots
 import plotly.graph_objects as go
 import datetime
 
+# CY 18 - Jan 2018 - Dec 2018
+# FY 18 - Oct 2017 - Sep 2018
+
 months = ['Jan.', 'Feb.', 'Mar.', 'Apr.','May', 'Jun.', 'Jul.', 'Aug.', 'Sep.', 'Oct.', 'Nov.', 'Dec.']
 monthsf = ['Oct.', 'Nov.', 'Dec.', 'Jan.', 'Feb.', 'Mar.', 'Apr.', 'May', 'Jun.', 'Jul.', 'Aug.', 'Sep.']
 year_list = ['2018', '2019', '2020', '2021']
 
-detentions = pd.read_csv('https://raw.githubusercontent.com/jlo-dcjd/juv-dashboard/main/apps/data/detentions_2016_2021.csv', index_col='Date')
+detentions = pd.read_csv(r'C:\Users\Juan.Lomeli\OneDrive - Dallas County\Documents\streamlit-app\multipage-app\apps\data\detentions_2016_2021.csv', index_col='Date')
 detentions = detentions.round(2)
 
 def percentage_change(col1,col2):
@@ -51,9 +54,7 @@ def det_perc_df_fy(change):
     df_perc['pct_change_20vs21'] = percentage_change(df_perc['2020'], df_perc['2021'])
     df_perc = df_perc.round(2)
     return df_perc
-  
-  
-  
+
 def app():
     st.title('Detention % Change')
 
@@ -171,3 +172,6 @@ def app():
         st.plotly_chart(fig2)
         st.subheader('{} Referrals'.format(change))
         st.dataframe(det_perc_df_fy(change))
+
+
+

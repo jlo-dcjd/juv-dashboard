@@ -1,6 +1,6 @@
 import streamlit as st
 from multiapp import MultiApp
-from apps import home, roc, ref_perc, det_perc, det_boxplot, form-ref-paper-ref  # import your app modules here
+from apps import home, roc, ref_perc, det_perc, det_boxplot, form_ref_paper_ref  # import your app modules here
 
 
 app = MultiApp()

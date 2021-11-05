@@ -13,7 +13,7 @@ months = ['Jan.', 'Feb.', 'Mar.', 'Apr.','May', 'Jun.', 'Jul.', 'Aug.', 'Sep.', 
 monthsf = ['Oct.', 'Nov.', 'Dec.', 'Jan.', 'Feb.', 'Mar.', 'Apr.', 'May', 'Jun.', 'Jul.', 'Aug.', 'Sep.']
 year_list = ['2018', '2019', '2020', '2021']
 
-detentions = pd.read_csv(r'C:\Users\Juan.Lomeli\OneDrive - Dallas County\Documents\streamlit-app\multipage-app\apps\data\detentions_2016_2021.csv', index_col='Date')
+detentions = pd.read_csv('https://raw.githubusercontent.com/jlo-dcjd/juv-dashboard/main/apps/data/detentions_2016_2021.csv', index_col='Date')
 detentions = detentions.round(2)
 
 def percentage_change(col1,col2):

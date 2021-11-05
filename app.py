@@ -1,6 +1,6 @@
 import streamlit as st
 from multiapp import MultiApp
-from apps import home, roc, ref_perc, det_perc, det_boxplot # import your app modules here
+from apps import home, roc, ref_perc, det_perc, det_boxplot, for-ref-paper-ref  # import your app modules here
 
 
 app = MultiApp()
@@ -17,6 +17,7 @@ app.add_app("Referral Offense Correlation", roc.app)
 app.add_app("Referral Offense % Change", ref_perc.app)
 app.add_app("Detention % Change", det_perc.app)
 app.add_app("Detention Boxplot per Year", det_boxplot.app)
+app.add_app("Formal & Paper Formalized Referrals", for-ref-paper-ref.app)
 
 
 # The main app

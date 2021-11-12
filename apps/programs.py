@@ -116,7 +116,7 @@ def pro_chart_avg(op):
     return st.plotly_chart(fig)
 
 
-program = pd.read_excel('https://raw.githubusercontent.com/jlo-dcjd/juv-dashboard/main/apps/data/program_population.csv', index_col=0)
+program = pd.read_csv('https://raw.githubusercontent.com/jlo-dcjd/juv-dashboard/main/apps/data/program_population.csv', index_col=0)
 pg_list = get_unique_numbers([x.split(',')[0] for x in program.columns]) # program list
 
 

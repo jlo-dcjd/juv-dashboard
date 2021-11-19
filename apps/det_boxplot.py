@@ -16,19 +16,20 @@ detentions = detentions.round(2)
 def det_df(change):
     df_perc = pd.DataFrame(index=list(range(1,13)))
     df_perc.index.names = ['Month']
-    df_perc['2016'] = detentions[change].iloc[:12].values
-    df_perc['2017'] = detentions[change].iloc[12:24].values
-    df_perc['2018'] = detentions[change].iloc[24:36].values
-    df_perc['2019'] = detentions[change].iloc[36:48].values
-    df_perc['2020'] = detentions[change].iloc[48:60].values
+    df_perc['2016'] = detentions[change].iloc[12:24].values
+    df_perc['2017'] = detentions[change].iloc[24:36].values
+    df_perc['2018'] = detentions[change].iloc[36:48].values
+    df_perc['2019'] = detentions[change].iloc[48:60].values
+    df_perc['2020'] = detentions[change].iloc[60:72].values
 
-    c2021 = pd.Series(detentions[change].iloc[60:].values)
+    c2021 = pd.Series(detentions[change].iloc[72:84].values)
     c2021.index += 1 
     df_perc['2021'] = c2021
 
 
     df_perc = df_perc.round(2)
     return df_perc
+
 
 def app():
     st.title('Detention Boxplot per Year')

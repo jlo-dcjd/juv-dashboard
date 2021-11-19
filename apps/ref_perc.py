@@ -59,7 +59,6 @@ def ref_perc_df_fy(change):
     df_perc['pct_change_19vs21'] = percentage_change(df_perc['2019'], df_perc['2021'])
     df_perc['pct_change_20vs21'] = percentage_change(df_perc['2020'], df_perc['2021'])
     df_perc = df_perc.round(2)
-    return df_percc.round(2)
     return df_perc
 
 

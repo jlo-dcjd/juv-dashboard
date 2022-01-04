@@ -28,10 +28,10 @@ def app():
 
     st.subheader('Select Referral Offenses')
     option = st.selectbox(
-        'Offense 1', general_2016.columns)
+        'Offense 1', general_2016.columns, index=0)
         
     option2 = st.selectbox(
-        'Offense 2', general_2016.columns)
+        'Offense 2', general_2016.columns, index=1)
 
 
 

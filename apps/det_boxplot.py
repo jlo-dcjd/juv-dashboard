@@ -38,12 +38,12 @@ def app():
 
     fig = go.Figure()
 
-    fig.add_trace(go.Box(y=detentions[change][:12], name='2016', boxmean=True))
-    fig.add_trace(go.Box(y=detentions[change][12:24], name='2017', boxmean=True))
-    fig.add_trace(go.Box(y=detentions[change][24:36], name='2018', boxmean=True))
-    fig.add_trace(go.Box(y=detentions[change][36:48], name='2019', boxmean=True))
-    fig.add_trace(go.Box(y=detentions[change][48:60], name='2020', boxmean=True))
-    fig.add_trace(go.Box(y=detentions[change][60:], name='2021', boxmean=True))
+    fig.add_trace(go.Box(y=detentions[change][12:24], name='2016', boxmean=True))
+    fig.add_trace(go.Box(y=detentions[change][24:36], name='2017', boxmean=True))
+    fig.add_trace(go.Box(y=detentions[change][36:48], name='2018', boxmean=True))
+    fig.add_trace(go.Box(y=detentions[change][48:60], name='2019', boxmean=True))
+    fig.add_trace(go.Box(y=detentions[change][60:72], name='2020', boxmean=True))
+    fig.add_trace(go.Box(y=detentions[change][72:84], name='2021', boxmean=True))
 
 
     fig.update_layout(title='{} - Boxplot Per Year'.format(change))

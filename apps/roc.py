@@ -40,7 +40,7 @@ def app():
 
     # ----------- scatter plots CY ---------------
     fig = make_subplots(rows=1, cols=6, shared_yaxes=False, subplot_titles=("2016", "2017", "2018", '2019', '2020', '2021'))
-
+                
     fig.add_trace(
         go.Scatter(
             x=general_2016[option][:12],
@@ -50,15 +50,15 @@ def app():
         row=1, col=1
     )
 
-            model = linear_model.LinearRegression()
-            X = general_2016[option][:12]
-            Y = general_2016[option2][:12]
-            model.fit(X, Y)
-            trend = model.predict(X)
+    model = linear_model.LinearRegression()
+    X = general_2016[option][:12]
+    Y = general_2016[option2][:12]
+    model.fit(X, Y)
+    trend = model.predict(X)
 
-            fig.add_trace(
-            go.Scatter(x= general_2016[option][:12], y=trend.reshape(1,-1).flatten(), mode = "lines", marker_color = "green"), 
-            row=1, col=1)
+    fig.add_trace(
+    go.Scatter(x= general_2016[option][:12], y=trend.reshape(1,-1).flatten(), mode = "lines", marker_color = "green"), 
+    row=1, col=1)
 
 
     fig.add_trace(

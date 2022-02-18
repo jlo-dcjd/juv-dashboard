@@ -119,9 +119,9 @@ def app():
                 st.success("Fiscal Year")
                 st.plotly_chart(figf)
 
-            fig1 = ex.line(refs_2016, x=refs_2016.index, y=refs_2016.columns, title='Monthly Referrals 2016-2021')
+            fig1 = ex.line(refs_2016, x=refs_2016.index, y=refs_2016.columns, title='Monthly Referrals 2016-2022')
             fig2 = ex.bar(refs['General_Category'].value_counts(), x=refs['General_Category'].value_counts().index, y=refs['General_Category'].value_counts().values, 
-                title='Referral Offenses 2016-2021')
+                title='Referral Offenses 2016-2022')
 
             st.plotly_chart(fig1)
             st.plotly_chart(fig2)

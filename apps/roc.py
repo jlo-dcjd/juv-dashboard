@@ -5,6 +5,8 @@ import plotly.express as ex
 from plotly.subplots import make_subplots
 import plotly.graph_objects as go
 import datetime
+from sklearn import linear_model
+from sklearn.metrics import mean_squared_error, r2_score
 
 col_names = ['Pid', 'Sex', 'Race', 'Ref_Date', 'Paper_Date', 'Referral_Date', 'Stat', 'Category', 'Offense',
             'General_Category', 'OffenseDescription', 'Referral_Type']
@@ -47,6 +49,18 @@ def app():
         ),
         row=1, col=1
     )
+
+     model = linear_model.LinearRegression()
+     X = general_2016[option][:12]
+     Y = general_2016[option2][:12]
+     model.fit(X, Y)
+     trend = model.predict(X)
+
+     fig.add_trace(
+         go.Scatter(x= general_2016[option][:12], y=trend.reshape(1,-1).flatten(), mode = "lines", marker_color = "green"), 
+         row=1, col=1)
+
+
     fig.add_trace(
         go.Scatter(
             x=general_2016[option][12:24],

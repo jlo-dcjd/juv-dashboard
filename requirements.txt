@@ -4,4 +4,4 @@ matplotlib==3.3.4
 plotly-express==0.4.1
 pandas==1.2.3
 streamlit==0.88.0
-sklearn==1.0.2
+sklearn==0.22

@@ -175,13 +175,13 @@ def app():
     )
 
     model = linear_model.LinearRegression()
-    X = general_2016[option][:12].values.reshape(-1,1)
-    Y = general_2016[option2][:12].values.reshape(-1,1)
+    X = general_2015[option][:12].values.reshape(-1,1)
+    Y = general_2015[option2][:12].values.reshape(-1,1)
     model.fit(X, Y)
     trend = model.predict(X)
 
     fig3.add_trace(
-    go.Scatter(x= general_2016[option][:12], y=trend.reshape(1,-1).flatten(), mode = "lines", marker_color = "green"), 
+    go.Scatter(x= general_2015[option][:12], y=trend.reshape(1,-1).flatten(), mode = "lines", marker_color = "green"), 
     row=1, col=1) 
 
     fig3.add_trace(
@@ -194,13 +194,13 @@ def app():
     )
 
     model = linear_model.LinearRegression()
-    X = general_2016[option][12:24].values.reshape(-1,1)
-    Y = general_2016[option2][12:24].values.reshape(-1,1)
+    X = general_2015[option][12:24].values.reshape(-1,1)
+    Y = general_2015[option2][12:24].values.reshape(-1,1)
     model.fit(X, Y)
     trend = model.predict(X)
 
     fig3.add_trace(
-    go.Scatter(x= general_2016[option][12:24], y=trend.reshape(1,-1).flatten(), mode = "lines", marker_color = "green"), 
+    go.Scatter(x= general_2015[option][12:24], y=trend.reshape(1,-1).flatten(), mode = "lines", marker_color = "green"), 
     row=1, col=2)             
             
     fig3.add_trace(
@@ -213,13 +213,13 @@ def app():
     )
 
     model = linear_model.LinearRegression()
-    X = general_2016[option][24:36].values.reshape(-1,1)
-    Y = general_2016[option2][24:36].values.reshape(-1,1)
+    X = general_2015[option][24:36].values.reshape(-1,1)
+    Y = general_2015[option2][24:36].values.reshape(-1,1)
     model.fit(X, Y)
     trend = model.predict(X)
 
     fig3.add_trace(
-    go.Scatter(x= general_2016[option][24:36], y=trend.reshape(1,-1).flatten(), mode = "lines", marker_color = "green"), 
+    go.Scatter(x= general_2015[option][24:36], y=trend.reshape(1,-1).flatten(), mode = "lines", marker_color = "green"), 
     row=1, col=3) 
 
     fig3.add_trace(
@@ -232,13 +232,13 @@ def app():
     )
             
     model = linear_model.LinearRegression()
-    X = general_2016[option][36:48].values.reshape(-1,1)
-    Y = general_2016[option2][36:48].values.reshape(-1,1)
+    X = general_2015[option][36:48].values.reshape(-1,1)
+    Y = general_2015[option2][36:48].values.reshape(-1,1)
     model.fit(X, Y)
     trend = model.predict(X)
 
     fig3.add_trace(
-    go.Scatter(x= general_2016[option][36:48], y=trend.reshape(1,-1).flatten(), mode = "lines", marker_color = "green"), 
+    go.Scatter(x= general_2015[option][36:48], y=trend.reshape(1,-1).flatten(), mode = "lines", marker_color = "green"), 
     row=1, col=4)             
             
     fig3.add_trace(
@@ -251,13 +251,13 @@ def app():
     )
 
     model = linear_model.LinearRegression()
-    X = general_2016[option][48:60].values.reshape(-1,1)
-    Y = general_2016[option2][48:60].values.reshape(-1,1)
+    X = general_2015[option][48:60].values.reshape(-1,1)
+    Y = general_2015[option2][48:60].values.reshape(-1,1)
     model.fit(X, Y)
     trend = model.predict(X)
 
     fig3.add_trace(
-    go.Scatter(x= general_2016[option][48:60], y=trend.reshape(1,-1).flatten(), mode = "lines", marker_color = "green"), 
+    go.Scatter(x= general_2015[option][48:60], y=trend.reshape(1,-1).flatten(), mode = "lines", marker_color = "green"), 
     row=1, col=5) 
 
     fig3.add_trace(
@@ -270,13 +270,13 @@ def app():
     )
             
     model = linear_model.LinearRegression()
-    X = general_2016[option][60:72].values.reshape(-1,1)
-    Y = general_2016[option2][60:72].values.reshape(-1,1)
+    X = general_2015[option][60:72].values.reshape(-1,1)
+    Y = general_2015[option2][60:72].values.reshape(-1,1)
     model.fit(X, Y)
     trend = model.predict(X)
 
     fig.add_trace(
-    go.Scatter(x= general_2016[option][60:72], y=trend.reshape(1,-1).flatten(), mode = "lines", marker_color = "green"), 
+    go.Scatter(x= general_2015[option][60:72], y=trend.reshape(1,-1).flatten(), mode = "lines", marker_color = "green"), 
     row=1, col=6)             
 
     fig3.update_xaxes(title_text=option, row=1, col=1)

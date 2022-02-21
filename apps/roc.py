@@ -57,7 +57,7 @@ def app():
     trend = model.predict(X)
 
     fig.add_trace(
-    go.Scatter(x= general_2016[option][:12], y=trend.reshape(1,-1).flatten(), mode = "lines", marker_color = "green"), showlegend=False, 
+    go.Scatter(x= general_2016[option][:12], y=trend.reshape(1,-1).flatten(), mode = "lines", marker_color = "green"), 
     row=1, col=1)
 
 
@@ -77,7 +77,7 @@ def app():
     trend = model.predict(X)
 
     fig.add_trace(
-    go.Scatter(x= general_2016[option][12:24], y=trend.reshape(1,-1).flatten(), mode = "lines", marker_color = "green"), showlegend=False,
+    go.Scatter(x= general_2016[option][12:24], y=trend.reshape(1,-1).flatten(), mode = "lines", marker_color = "green"),
     row=1, col=2)            
             
             
@@ -160,7 +160,7 @@ def app():
     fig.update_xaxes(tick0=0, dtick=10, row=1, col=3)
 
 
-    fig.update_layout(width=1200, height=350, title_text="{} vs. {}".format(option, option2))
+    fig.update_layout(width=1200, height=350, title_text="{} vs. {}".format(option, option2), showlegend=False)
     # -------------------------
     # ----------- scatter plots FY ---------------
     fig3 = make_subplots(rows=1, cols=6, shared_yaxes=False, subplot_titles=("2016", "2017", "2018", '2019', '2020', '2021'))

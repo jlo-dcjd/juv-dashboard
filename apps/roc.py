@@ -51,8 +51,8 @@ def app():
     )
 
     model = linear_model.LinearRegression()
-    X = general_2016[option][:12]
-    Y = general_2016[option2][:12]
+    X = general_2016[option][:12].values.reshape(-1,1)
+    Y = general_2016[option2][:12].values.reshape(-1,1)
     model.fit(X, Y)
     trend = model.predict(X)
 

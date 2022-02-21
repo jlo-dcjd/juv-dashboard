@@ -57,7 +57,7 @@ def app():
     trend = model.predict(X)
 
     fig.add_trace(
-    go.Scatter(x= general_2016[option][:12], y=trend.reshape(1,-1).flatten(), mode = "lines", marker_color = "green"), 
+    go.Scatter(x= general_2016[option][:12], y=trend.reshape(1,-1).flatten(), mode = "lines", marker_color = "green"), showlegend=False, 
     row=1, col=1)
 
 
@@ -77,7 +77,7 @@ def app():
     trend = model.predict(X)
 
     fig.add_trace(
-    go.Scatter(x= general_2016[option][12:24], y=trend.reshape(1,-1).flatten(), mode = "lines", marker_color = "green"), 
+    go.Scatter(x= general_2016[option][12:24], y=trend.reshape(1,-1).flatten(), mode = "lines", marker_color = "green"), showlegend=False,
     row=1, col=2)            
             
             

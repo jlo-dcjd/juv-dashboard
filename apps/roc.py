@@ -173,6 +173,17 @@ def app():
         ),
         row=1, col=1
     )
+
+    model = linear_model.LinearRegression()
+    X = general_2016[option][:12].values.reshape(-1,1)
+    Y = general_2016[option2][:12].values.reshape(-1,1)
+    model.fit(X, Y)
+    trend = model.predict(X)
+
+    fig3.add_trace(
+    go.Scatter(x= general_2016[option][:12], y=trend.reshape(1,-1).flatten(), mode = "lines", marker_color = "green"), 
+    row=1, col=1) 
+
     fig3.add_trace(
         go.Scatter(
             x=general_2015[option][12:24],
@@ -181,6 +192,17 @@ def app():
         ),
         row=1, col=2
     )
+
+    model = linear_model.LinearRegression()
+    X = general_2016[option][12:24].values.reshape(-1,1)
+    Y = general_2016[option2][12:24].values.reshape(-1,1)
+    model.fit(X, Y)
+    trend = model.predict(X)
+
+    fig3.add_trace(
+    go.Scatter(x= general_2016[option][12:24], y=trend.reshape(1,-1).flatten(), mode = "lines", marker_color = "green"), 
+    row=1, col=2)             
+            
     fig3.add_trace(
         go.Scatter(
             x=general_2015[option][24:36],
@@ -189,6 +211,17 @@ def app():
         ),
         row=1, col=3
     )
+
+    model = linear_model.LinearRegression()
+    X = general_2016[option][24:36].values.reshape(-1,1)
+    Y = general_2016[option2][24:36].values.reshape(-1,1)
+    model.fit(X, Y)
+    trend = model.predict(X)
+
+    fig3.add_trace(
+    go.Scatter(x= general_2016[option][24:36], y=trend.reshape(1,-1).flatten(), mode = "lines", marker_color = "green"), 
+    row=1, col=3) 
+
     fig3.add_trace(
         go.Scatter(
             x=general_2015[option][36:48],
@@ -197,6 +230,17 @@ def app():
         ),
         row=1, col=4
     )
+            
+    model = linear_model.LinearRegression()
+    X = general_2016[option][36:48].values.reshape(-1,1)
+    Y = general_2016[option2][36:48].values.reshape(-1,1)
+    model.fit(X, Y)
+    trend = model.predict(X)
+
+    fig3.add_trace(
+    go.Scatter(x= general_2016[option][36:48], y=trend.reshape(1,-1).flatten(), mode = "lines", marker_color = "green"), 
+    row=1, col=4)             
+            
     fig3.add_trace(
         go.Scatter(
             x=general_2015[option][48:60],
@@ -205,14 +249,35 @@ def app():
         ),
         row=1, col=5
     )
+
+    model = linear_model.LinearRegression()
+    X = general_2016[option][48:60].values.reshape(-1,1)
+    Y = general_2016[option2][48:60].values.reshape(-1,1)
+    model.fit(X, Y)
+    trend = model.predict(X)
+
+    fig3.add_trace(
+    go.Scatter(x= general_2016[option][48:60], y=trend.reshape(1,-1).flatten(), mode = "lines", marker_color = "green"), 
+    row=1, col=5) 
+
     fig3.add_trace(
         go.Scatter(
-            x=general_2015[option][60:],
-            y=general_2015[option2][60:],
+            x=general_2015[option][60:72],
+            y=general_2015[option2][60:72],
             mode="markers",
         ),
         row=1, col=6
     )
+            
+    model = linear_model.LinearRegression()
+    X = general_2016[option][60:72].values.reshape(-1,1)
+    Y = general_2016[option2][60:72].values.reshape(-1,1)
+    model.fit(X, Y)
+    trend = model.predict(X)
+
+    fig.add_trace(
+    go.Scatter(x= general_2016[option][60:72], y=trend.reshape(1,-1).flatten(), mode = "lines", marker_color = "green"), 
+    row=1, col=6)             
 
     fig3.update_xaxes(title_text=option, row=1, col=1)
     fig.update_yaxes(title_text=option2, row=1, col=1)
@@ -221,7 +286,7 @@ def app():
     fig3.update_xaxes(tick0=0, dtick=10, row=1, col=3)
 
 
-    fig3.update_layout(width=1200, height=350, title_text="{} vs. {}".format(option, option2))
+    fig3.update_layout(width=1200, height=350, title_text="{} vs. {}".format(option, option2), showlegend=False)
     # -------------------------
 
     # ------ Sub plots (line chart + r correlation) CY

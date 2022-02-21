@@ -58,7 +58,7 @@ def app():
 
     fig.add_trace(
     go.Scatter(x= general_2016[option][:12], y=trend.reshape(1,-1).flatten(), mode = "lines", marker_color = "green"), 
-    row=1, col=1)
+    row=1, col=2)
 
 
     fig.add_trace(

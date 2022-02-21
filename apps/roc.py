@@ -69,6 +69,18 @@ def app():
         ),
         row=1, col=2
     )
+
+    model = linear_model.LinearRegression()
+    X = general_2016[option][12:24].values.reshape(-1,1)
+    Y = general_2016[option2]12[:24].values.reshape(-1,1)
+    model.fit(X, Y)
+    trend = model.predict(X)
+
+    fig.add_trace(
+    go.Scatter(x= general_2016[option][12:24], y=trend.reshape(1,-1).flatten(), mode = "lines", marker_color = "green"), 
+    row=1, col=1)            
+            
+            
     fig.add_trace(
         go.Scatter(
             x=general_2016[option][24:36],

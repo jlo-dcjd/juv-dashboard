@@ -275,7 +275,7 @@ def app():
     model.fit(X, Y)
     trend = model.predict(X)
 
-    fig.add_trace(
+    fig3.add_trace(
     go.Scatter(x= general_2015[option][60:72], y=trend.reshape(1,-1).flatten(), mode = "lines", marker_color = "green"), 
     row=1, col=6)             
 
